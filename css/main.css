@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'Supreme-ExtraboldItalic';
+    src: url(/font/Supreme_Complete/Fonts/OTF/Supreme-ExtraboldItalic.otf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Supreme-Light';
+    src: url(/font/Supreme_Complete/Fonts/OTF/Supreme-Light.otf) format('truetype');
+}
+
+.font-secundaria {
+    font-family: 'Supreme-Light';
+}
+
+.font-principal {
+    font-family: 'Supreme-ExtraboldItalic';
+}
+
+.nav-link.active {
+    --bs-nav-pills-link-active-bg: #212529;
+    --bs-navbar-active-color: #ebebeb;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+}
+
+.divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 2px solid #000;
+}
+
+.divider::before {
+    margin-right: 10px; 
+}
+
+.divider::after {
+    margin-left: 10px; 
+}
+
+#img-crl-prp {
+    max-height: 407px;
+}
+
+#segundo-nav {
+    --bs-link-color: #888888a2; 
+}
+
+#segundo-nav .nav-link:hover {
+    --bs-nav-link-hover-color: #808080;
+}
+
+.card-img-overlay {
+    background-color: rgba(0, 0, 0, 0.349);
+}
+
+#img-crl-prp {
+    height: 407px;
+}
+
+.footer {
+    background-color: #212529;
+    color: #fff;
+    height: 15vh;
+}
+
+.footer-links i {
+    margin-left: 0.5em;
+}

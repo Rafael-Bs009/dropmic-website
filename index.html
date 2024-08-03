@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropmic</title>
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <header id="cabecalho">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary shadow fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand me-lg-5" href="#cabecalho">
+                        <img src="./logo/tipografia_completa_em_preto.png" alt="logo" class="d-inline-block align-text-top">
+                    </a>
+                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse ms-lg-5 " id="menu">
+                        <ul class="nav navbar-nav nav-pills nav-fill me-auto mb-2 mb-lg-0 ml-lg-500" >
+                            <li class="nav-item">
+                                <a class="nav-link active btn btn-dark fs-5" role="button" aria-current="page" href="#cabecalho">Início</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-dark font-secundaria fs-5" role="button" href="#aba-noticia">Notícias</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-dark font-secundaria fs-5" role="button" href="#aba-midia">Mídia</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-dark font-secundaria fs-5" role="button" href="#aba-playlist">Playlist</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex collapse" id="procurar" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Procurar" aria-label="search">
+                            <button class="btn btn-outline-dark" type="submit"><i class="bi bi-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div data-bs-spy="scroll" data-bs-target="#cabecalho">
+        <section>
+            <div class="container">
+                <div class="row mt-5 align-self-start pt-5 p-4">
+                    <div class="col-12 col-lg-9">
+                        <h1 class="text-uppercase display-1 fw-bold font-principal">Explorando o mundo da música, moda e da arte.</h1>
+                    </div>
+                    <div class="col-12 col-lg-3 align-self-end">
+                        <p class="fs-5 fw-light font-secundaria">Música, moda e arte em um só lugar. Notícias atualizadas, playlists selecionadas, clipes e as últimas tendências. </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="row mt-5 ml-5">
+                    <div class="col-12 col-lg-6">
+                        <div id="carouselPrincipal" class="carousel slide carousel-fade" data-bs-ride="true">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselPrincipal" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselPrincipal" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselPrincipal" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active" data-bs-interval="10000">
+                                    <img id="img-crl-prp" src="./img/Rayssa-Leal-Olimpiada.jpg" class="d-block w-100  rounded" alt="Rayssa Leal nas Olimpíadas">
+                                </div>
+                                <div class="carousel-item" data-bs-interval="10000">
+                                    <img id="img-crl-prp" src="./img/will-smith.jpg" class="d-block w-100 img-fluid rounded " alt="Will Smith">
+                                </div>
+                                <div class="carousel-item" data-bs-interval="10000">
+                                    <img id="img-crl-prp" src="./img/will-vagabundo-de-luxo.jpg" class="d-block w-100 img-fluid  rounded " alt="Vagabundo de Luxo">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselPrincipal" data-bs-slide="prev">
+                                <span class="bi bi-skip-start h1" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselPrincipal" data-bs-slide="next">
+                                <span class="bi bi-skip-end h1" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 ">
+                        <nav id="segundo-nav">
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <button class="nav-link active font-principal" id="nav-1-crl-tab" data-bs-toggle="tab" data-bs-target="#nav-1-crl" type="button" role="tab" aria-controls="nav-1-crl" aria-selected="true">Rayssa Leal nas Olimpíadas</button>
+                            <button class="nav-link font-principal" id="nav-2-crl-tab" data-bs-toggle="tab" data-bs-target="#nav-2-crl" type="button" role="tab" aria-controls="nav-2-crl" aria-selected="false">Will Smith</button>
+                            <button class="nav-link font-principal" id="nav-3-crl-tab" data-bs-toggle="tab" data-bs-target="#nav-3-crl" type="button" role="tab" aria-controls="nav-3-crl" aria-selected="false">Vagabundo de Luxo</button>
+                            </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active font-secundaria" id="nav-1-crl" role="tabpanel" aria-labelledby="nav-1-crl-tab" tabindex="0">
+                                <h2 class="mt-3 fw-bold">O que Rayssa Leal Ouviu nas Olimpíadas? Confira a Playlist da Medalhista de Bronze</h2>
+                                <p><strong>Rayssa Leal</strong>, a jovem skatista brasileira que conquistou o bronze no skate street em Paris 2024, revelou a playlist que a acompanhou durante as competições. Conhecida como a "fadinha do skate", Leal compartilhou suas músicas favoritas para se preparar e se concentrar nas manobras que garantiram seu lugar no pódio.</p>
+                                <p>Entre as faixas que embalaram sua performance estão:</p>
+                                <ul>
+                                    <li><strong>"Mudar para Quê?"</strong> – Os Nonatos</li>
+                                    <li><strong>"É o Amor"</strong> – Zezé di Camargo e Luciano</li>
+                                    <li><strong>"Músicas Aleatórias"</strong> – Djavan</li>
+                                    <li><strong>"Leal"</strong> – Djonga</li>
+                                    <li><strong>"Faixas Aleatórias"</strong> – L7</li>
+                                    <li><strong>"Me, Myself and I"</strong> – G-Eazy e Bebe Rexha</li>
+                                </ul>
+                                <p>A playlist de Leal é uma mistura eclética que reflete seu estilo único e seu preparo para a competição. A skatista, que já havia conquistado a prata em Tóquio 2020, se tornou a atleta mais jovem a subir ao pódio em edições diferentes dos Jogos Olímpicos.</p>
+                                <p>Leal terminou a competição com 253,37 pontos, atrás da japonesa Coco Yoshizawa (272,75 pontos) e da prata Liz Akama (265,95 pontos).</p>
+                                <p><strong>Fonte:</strong> Vogue França, LANCE!</p>
+                            </div>
+                            <div class="tab-pane fade font-secundaria" id="nav-2-crl" role="tabpanel" aria-labelledby="nav-2-crl-tab" tabindex="0">
+                                <h2 class="mt-3 fw-bold">Will Smith Assina com Gravadora e Anuncia Retorno à Música</h2>
+                                <p><strong>Will Smith</strong> está de volta à música! O renomado ator e cantor firmou um novo contrato com a gravadora independente SLANG para lançar seu próximo álbum de estúdio. Conhecido por hits como "Miami", "Gettin' Jiggy Wit It" e "Hey Sexy Lady", Smith retoma sua carreira musical após um período de pausa.</p>
+                                <p>A gravadora SLANG, liderada pelo executivo Rene McLean, também é lar de artistas como Mary J. Blige, Cardi B, Big Sean e Roddy Ricch. O anúncio marca um emocionante retorno à cena musical para Smith, que continua a surpreender com seus projetos diversos.</p>
+                                <p><strong>Fonte:</strong> Forbes</p>
+                            </div>
+                            <div class="tab-pane fade font-secundaria" id="nav-3-crl" role="tabpanel" aria-labelledby="nav-3-crl-tab" tabindex="0">
+                                <h2 class="mt-3 fw-bold">WIU Lança “Vagabundo de Luxo” com Nova Energia</h2>
+                                <p><strong>WIU</strong>, um dos principais nomes do trap brasileiro, acaba de lançar seu segundo álbum de estúdio, <em>Vagabundo de Luxo</em>. O sucessor de <em>Manual de Como Amar Errado</em> (2022) chegou às plataformas de streaming na última quarta-feira, 10, e traz uma nova abordagem musical.</p>
+                                <p>Com 22 anos e parte do catálogo da 30PRAUM, ao lado de Matuê e Teto, WIU surpreendeu os fãs com este álbum repleto de “energia,” conforme declarado à Rolling Stone Brasil. A nova produção se destaca pelas letras mais vibrantes e batidas animadas, contrastando com o trabalho mais introspectivo de seu álbum anterior.</p>
+                                <p>O artista também lançou o single "Rainha da Finesse" antes do álbum, criando um mistério intencional em torno do lançamento para destacar o nível de qualidade do novo trabalho. “Queria algo que mostrasse a qualidade sem entregar tudo de uma vez,” disse WIU.</p>
+                                <p><strong>Fonte:</strong> Rolling Stone Brasil</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="aba-noticia">
+            <div class="container mt-5 mb-5">
+                <div class="divider">
+                    <div class="divider::before">
+                    <div class="divider::after">
+                    <h2 class="font-principal">Notícias</h2>
+                    <div class="divider::before">
+                    <div class="divider::after">
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="row gap-5 gap-md-1 align-items-center justify-content-center mt-5">
+                    <div class="col-12 col-md-4 col-lg-3 p-lg-2 me-md-0 me-auto">
+                        <div class="card">
+                            <img src="./img/musicasprasairnamao.jfif" class="card-img-top" alt="Músicas Pra Sair na Mão">
+                            <div class="card-body">
+                            <h5 class="card-title font-principal">RAP, falando lança mixtape com Tasha & Tracie, Rashid, MC Luanna e mais 41 artistas</h5>
+                            <p class="card-text font-secundaria">Intitulada Músicas Pra Sair na Mão, Vol. 1, mixtape da RAP, falando conta com 15 faixas e chegou nas plataformas de streaming hoje (25) via ONErpm</p>
+                            <div class="card-footer d-flex justify-content-end">
+                                <a href="#" class="btn btn-dark">Ler mais</a>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-7 col-lg-5 p-lg-2 me-md-0  me-auto mw-md-100 ">
+                        <div class="card text-bg-dark" >
+                            <img src="./img/froid o queridinho de deus.jfif" class="card-img-top" alt="froid o queridinho de deus">
+                            <div class="card-img-overlay ">
+                                <div class="card-body" id="body-card-principal">
+                                    <h5 class="card-title font-principal">Froid lança "O Queridinho de Deus" com nova abordagem criativa</h5>
+                                    <p class="card-text font-secundaria">Froid surpreende com "O Queridinho de Deus", seu quinto álbum, gravado remotamente em locais variados como praia e hotel. O disco reflete sua evolução artística, misturando rap com influências de dance hall e afrobeat. Froid enfatiza a liberdade criativa como chave para seu trabalho, criando um som maduro e introspectivo. </p>
+                                <div class="card-footer d-flex justify-content-end">
+                                    <a href="#" class="btn btn-dark">Ler mais</a>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-12 p-md-5 p-lg-2 col-lg-3 me-md-0 me-auto">
+                        <div class="card">
+                            <img src="./img/suicidal-tendencies.jpg" class="card-img-top d-md-none d-lg-block " alt="suicidal-tendencies">
+                            <div class="card-body">
+                            <h5 class="card-title font-principal">Suicidal Tendencies: Mike Muir revela o significado do nome</h5>
+                            <p class="card-text font-secundaria">Mike Muir, vocalista da banda Suicidal Tendencies, explica que o nome do grupo é uma metáfora para superar medos e desafios. Inspirado por seu irmão skatista, Muir vê "suicida" como uma forma de romper barreiras e seguir seus sonhos, desafiando as limitações impostas pelos outros.</p>
+                            <div class="card-footer d-flex justify-content-end">
+                                <a href="#" class="btn btn-dark">Ler mais</a>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center align-items-center gap-5 gap-md-3 mt-5 gap-lg-0">
+                    <div class="col-12 col-md-5 col-lg-4 m-md-0 m-lg-0 p-lg-1">
+                        <div class="card">
+                            <div class="card-header"></div>
+                            <div class="card-body">
+                            <h5 class="card-title font-principal">Travis Scott anuncia show solo no Brasil em 2024; data, cidade e mais</h5>
+                            <p class="card-text font-secundaria">Além da apresentação solo, Travis Scott é uma das principais atrações do Rock in Rio 2024, que celebra 40 anos do festival.</p>
+                            <div class="card-footer d-flex justify-content-end">
+                                <a href="#" class="btn btn-dark">Ler mais</a>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5 col-lg-4 me-md-0 m-lg-0 p-lg-1">
+                        <div class="card">
+                            <div class="card-header"></div>
+                            <div class="card-body">
+                            <h5 class="card-title font-principal">The Weeknd anuncia show único no Brasil; data, cidade, preços e mais</h5>
+                            <p class="card-text font-secundaria">Menos de um ano após realizar shows em São Paulo, o cantor canadense The Weeknd volta à cidade para um show que promete ser exclusivo.</p>
+                            <div class="card-footer d-flex justify-content-end">
+                                <a href="#" class="btn btn-dark">Ler mais</a>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-4 p-md-5 me-md-0 m-lg-0 p-lg-1">
+                        <div class="card">
+                            <div class="card-header"></div>
+                            <div class="card-body">
+                            <h5 class="card-title font-principal">Planet Hemp, Timbalada e Afrocidade e Joyce Alane se apresentarão no Coala Festival</h5>
+                            <p class="card-text font-secundaria">A organização do festival divulgou as atrações do domingo, 8 de setembro, terceiro dia do evento que comemora 10 anos de história.</p>
+                            <div class="card-footer d-flex justify-content-end">
+                                <a href="#" class="btn btn-dark">Ler mais</a>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="aba-midia">
+            <div class="container mt-5 mb-5">
+                <div class="divider">
+                    <div class="divider::before">
+                    <div class="divider::after">
+                    <h2 class="font-principal">Mídia</h2>
+                    <div class="divider::before">
+                    <div class="divider::after">
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="row gap-5 gap-md-1">
+                    <div class="col-12 me-md-0 m-3">
+                        <h1 class="h1 font-principal">Yago Oproprio lança álbum e curta-metragem revelando sua essência.</h1>
+                        <p class="font-secundaria fs-4">
+                            Yago Oproprio, rapper paulista da Zona Leste de São Paulo, estreia com seu álbum <strong>"Oproprio"</strong>. O disco, produzido em colaboração com Patricio Sid, reflete suas vivências e experiências pessoais através de 10 faixas.
+                        </p>
+                        <p class="font-secundaria fs-4">
+                            Conhecido pelos singles desde 2019 e sua participação no disco em homenagem a Sabotage, Yago finalmente entrega um projeto solo que mergulha fundo em sua identidade artística. <strong>"Oproprio"</strong> combina boombap com outros estilos, e o rapper não se limita a um gênero específico.
+                        </p>
+                        <p class="font-secundaria fs-4">
+                            O álbum é complementado por um curta-metragem que ilustra três das faixas: <strong>"La Noche," "Inofensiva"</strong> e <strong>"Jejum"</strong>. O projeto audiovisual, dirigido por Ênio Cesar, Larissa Zaidan e Luis Carone, visa prêmios e um maior alcance.
+                        </p>
+                        <p class="font-secundaria fs-4">
+                            A capa do álbum, com cores fortes e uma nova logo, foi criada por Rodrigo Branco e o diretor criativo Fernando Marar, que também sugeriu o título <strong>"Oproprio"</strong> em vez de <strong>"Proprietário"</strong>. Yago afirma que este trabalho marca um novo início para sua carreira, mostrando sua verdadeira essência como artista.
+                        </p>
+                    </div>
+                    <div class="col-12 m-md-0 mb-5 m-auto p-md-0 p-lg-5">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/aj1AiyER4YA?si=L5QbYpkWleocNPwc" title="YouTube video" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="aba-playlist">
+            <div class="container mt-5 mb-5">
+                <div class="divider">
+                    <div class="divider::before">
+                    <div class="divider::after">
+                    <h2 class="font-principal">Playlist</h2>
+                    <div class="divider::before">
+                    <div class="divider::after">
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="row gap-5 gap-md-1">
+                    <div class="col-12  me-md-0 m-3">
+                        <h1 class="h1 font-principal">Marcelo D2 Relança Quatro Álbuns Clássicos da Carreira Solo no Streaming</h1>
+                        <p class="font-secundaria fs-4">
+                            Marcelo D2, um dos artistas mais influentes da música brasileira, está trazendo quatro álbuns essenciais de sua carreira solo para as plataformas de streaming. A partir de 26 de julho de 2024, <strong>Meu Samba É Assim</strong> (2006) estará disponível para o público, seguido por <strong>Eu Tiro a Onda</strong> (1998) em 2 de agosto, <strong>Acústico MTV</strong> (2004) em 9 de agosto, e <strong>A Procura da Batida Perfeita</strong> (2003) em 16 de agosto.</p>
+                            <p class="font-secundaria fs-4">Em uma declaração à imprensa, D2 expressou sua satisfação com o relançamento: "<em>A chegada desses quatro álbuns às plataformas é muito importante para mim. Cada um desses trabalhos representa um momento crucial da minha trajetória.</em>" Ele acrescentou, "<em>Agora, com toda a minha obra solo disponível, o público pode reviver ou descobrir essas histórias e sonoridades.</em>"</p>
+                            <p class="font-secundaria fs-4">O relançamento dos álbuns permite que tanto novos ouvintes quanto fãs antigos redescubram a riqueza musical e a evolução artística de Marcelo D2, que continua a tocar e inspirar gerações com sua música inovadora e influente.</p>
+                            <p class="font-secundaria fs-4"><strong>Acompanhe o retorno desses clássicos e mergulhe na trajetória de um dos maiores nomes do rap e samba brasileiro!</strong></p>
+                    </div>
+                    <div class="col-12  me-md-0 mb-5 m-auto p-lg-5">
+                        <div class="ratio ratio-1x1">
+                            <iframe src="https://open.spotify.com/embed/album/1SyA9JwiTxWoJTx6YoZ1TV?utm_source=generator&theme=0" title="YouTube video" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="d-flex justify-content-between">
+                    <p class="footer-text justify-content-start mt-4 pt-3 font-secundaria">
+                        &copy; 2024 Dropmic - Todos os direitos reservados
+                    </p>
+                    <div class="footer-links fs-2 mt-4">
+                        <i class="bi bi-instagram"></i>
+                        <i class="bi bi-youtube"></i>
+                        <i class="bi bi-tiktok"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./lib/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
